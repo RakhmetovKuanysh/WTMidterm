@@ -14,7 +14,7 @@ class ToggleableProduct extends Component {
       return (
         <div className = "productDefault" onClick = {this.props.changeStatus} >
           <p className = "textP" id = {this.props.block.id} >
-            {this.props.block.name} {this.props.block.price}
+            {this.props.block.name} {this.props.block.price} тг
           </p>
         </div>
       );
@@ -22,7 +22,7 @@ class ToggleableProduct extends Component {
       return (
         <div className = "productActive" onClick = {this.props.changeStatus} >
           <p className = "textPWhite" id = {this.props.block.id} >
-            {this.props.block.name} {this.props.block.price}
+            {this.props.block.name} {this.props.block.price} тг
           </p>
         </div>
       );

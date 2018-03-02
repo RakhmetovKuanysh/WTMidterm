@@ -5,5 +5,6 @@ import App from './App';
 import Products from './Products';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Products />, document.getElementById('root'));
+// to change to second project use App component instead of Products
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
