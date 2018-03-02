@@ -35,15 +35,9 @@ class App extends Component {
 
     let blocks = this.state.blocks.slice();
 
-    for(let i=0;i<blocks.length;i++) {
-      if(blocks[i].id == id) {
-        blocks[i].active = true;
-      } else {
-        blocks[i].active = false;
-      }
-    }
-
-    console.log(blocks);
+    blocks.map(block => block.active = false);
+    let elem = blocks.find(block => block.id == id);
+    elem.active = true;
 
     this.setState({
       "blocks": blocks,

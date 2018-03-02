@@ -44,12 +44,8 @@ class Products extends Component {
     let id = e.target.id;
 
     let blocks = this.state.blocks.slice();
-
-    for(let i=0;i<blocks.length;i++) {
-      if(blocks[i].id == id) {
-        blocks[i].active = !blocks[i].active;
-      }
-    }
+    let elem = blocks.find(block => block.id == id);
+    elem.active = !elem.active;
 
     this.setState({
       "blocks": blocks,
@@ -82,7 +78,7 @@ class Products extends Component {
           {blocks}
         </div>
         <div className = "nav">
-          <p>Total: {this.state.cart}</p>
+          <p>Total: {this.state.cart} тг</p>
         </div>
       </div>
     );
